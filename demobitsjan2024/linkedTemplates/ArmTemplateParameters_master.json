@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "demobitsjan2024"
+		},
+		"LS_SQL_SourceDB_connectionString": {
+			"value": ""
+		},
+		"LS_SQL_TargetDB_connectionString": {
+			"value": ""
+		},
+		"LS_Storage_demobitsadlsgen2_PO_accountKey": {
+			"value": ""
+		},
+		"LS_Storage_demobitsadlsgen2_PO_properties_typeProperties_url": {
+			"value": "https://demobitsadlsgen2.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
