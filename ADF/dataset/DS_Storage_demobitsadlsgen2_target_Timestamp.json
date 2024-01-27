@@ -1,0 +1,33 @@
+{
+	"name": "DS_Storage_demobitsadlsgen2_target_Timestamp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Storage_demobitsadlsgen2_PO",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(formatDateTime(utcNow(),'yyyyMMdd'),dataset().FileName)",
+					"type": "Expression"
+				},
+				"folderPath": "target",
+				"fileSystem": "dataengineering"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

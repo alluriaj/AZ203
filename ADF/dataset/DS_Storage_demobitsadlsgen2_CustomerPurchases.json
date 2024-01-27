@@ -1,0 +1,25 @@
+{
+	"name": "DS_Storage_demobitsadlsgen2_CustomerPurchases",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Storage_demobitsadlsgen2_PO",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "CustomerPurchases.txt",
+				"folderPath": "target",
+				"fileSystem": "dataengineering"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
